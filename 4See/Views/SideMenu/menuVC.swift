@@ -26,16 +26,14 @@ class menuVC: UIViewController {
     @IBAction func menuBtnAction(_ sender: Any) {
         switch (sender as AnyObject).tag{
         case 1:
-            let objc = HomeViewController()
-            self.navigationController?.pushViewController(objc)
+            break
+
         case 2:
-            let objc = attendanceVC()
-            self.navigationController?.pushViewController(objc)
-//            let objc = toolsTradeViewController()
-//            self.navigationController?.pushViewController(objc)
+            let storyboard = UIStoryboard(name: "Attendance", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AttendanceListViewController") as! AttendanceListViewController
+            navigationController?.pushViewController(vc, completion: nil)
         case 3:
-            let objc = attendanceVC()
-            self.navigationController?.pushViewController(objc)
+            break
         case 4:
             let objc = messageVC()
             self.navigationController?.pushViewController(objc)
