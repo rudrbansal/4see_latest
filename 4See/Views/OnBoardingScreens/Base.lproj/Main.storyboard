@@ -292,7 +292,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-YX-V7C">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="966"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="theme"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="6ug-us-o8v">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -714,7 +714,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="njx-nv-dMM">
             <objects>
-                <viewController storyboardIdentifier="editProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="euX-P9-KtV" customClass="editProfileViewController" customModule="_See" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="euX-P9-KtV" customClass="EditProfileViewController" customModule="_See" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ka3-nh-e3A"/>
                         <viewControllerLayoutGuide type="bottom" id="Ll2-Pf-3Uo"/>

@@ -18,7 +18,7 @@ class ProfileViewController: UIViewController {
     
     @IBAction func btnActionEdit(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "editProfileViewController") as! editProfileViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "EditProfileViewController") as! EditProfileViewController
         navigationController?.pushViewController(vc, completion: nil)
     }
     

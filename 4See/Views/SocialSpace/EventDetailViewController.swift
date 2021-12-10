@@ -18,7 +18,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var btnBack: UIButton!
     
     let titles = ["Description", "Date", "Time", "Location"]
-    let values = ["Description descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageView descriptionImageViewdescriptionImageView descriptionImageView descriptionImageView", "20/12/2021", "18h00 - 22h30", "123 office street, sandtron 2191"]
+    let values = ["Description dummy data", "20/12/2021", "18h00 - 22h30", "123 office street, sandtron 2191"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

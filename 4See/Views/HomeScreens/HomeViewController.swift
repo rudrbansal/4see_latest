@@ -161,8 +161,6 @@ class HomeViewController: BaseViewController {
     }
     
     @IBAction func btnActionProfile(_ sender: UIButton) {
-//        let objc = editProfileViewController()
-//        self.navigationController?.pushViewController(objc)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
         navigationController?.pushViewController(vc, completion: nil)

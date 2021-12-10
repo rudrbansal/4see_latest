@@ -690,7 +690,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="riP-fm-fSo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgA-PA-Z9i">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundBoxes" translatesAutoresizingMaskIntoConstraints="NO" id="rgA-PA-Z9i">
                                         <rect key="frame" x="0.0" y="180" width="414" height="716"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="egc-41-pjw">
@@ -707,7 +707,7 @@
                                             </label>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="glt-Aw-8B4">
                                                 <rect key="frame" x="0.0" y="52" width="350" height="549.5"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="WorkingFromHomeTableViewCell" id="edu-Zh-Tq0" customClass="WorkingFromHomeTableViewCell" customModule="_See" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="44.5" width="350" height="43.5"/>
@@ -746,6 +746,7 @@
                                                                 <constraint firstItem="3Fr-KR-3SW" firstAttribute="leading" secondItem="sCh-6H-ZXK" secondAttribute="leading" id="z3F-ap-DFA"/>
                                                             </constraints>
                                                         </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <connections>
                                                             <outlet property="btnSelection" destination="vk8-ez-wEt" id="oBI-p4-h3p"/>
                                                             <outlet property="timingLabel" destination="3Fr-KR-3SW" id="Yi6-EG-0TM"/>
@@ -760,7 +761,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="msu-Wh-r9H" firstAttribute="centerX" secondItem="egc-41-pjw" secondAttribute="centerX" id="3AM-Ri-vPW"/>
                                             <constraint firstItem="yk7-F6-Hg3" firstAttribute="leading" secondItem="egc-41-pjw" secondAttribute="leading" constant="8" id="ED3-hp-hbp"/>

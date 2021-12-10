@@ -243,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gh4-RF-5uI">
-                                <rect key="frame" x="0.0" y="180" width="375" height="518"/>
+                                <rect key="frame" x="0.0" y="180" width="375" height="578"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="75A-Sp-i2g">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
@@ -383,6 +383,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="I'm In">
                                             <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                            <color key="baseForegroundColor" red="0.35686274509999999" green="0.69803921570000005" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btnActionConfirm:" destination="KR6-OI-3mX" eventType="touchUpInside" id="hGY-IG-b1F"/>
@@ -393,6 +394,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="No Thanks">
                                             <fontDescription key="titleFontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                            <color key="baseForegroundColor" name="appRed"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btnActionCancel:" destination="KR6-OI-3mX" eventType="touchUpInside" id="SAO-WM-X5G"/>
@@ -425,8 +427,10 @@
                             <constraint firstItem="qwq-cZ-RTk" firstAttribute="leading" secondItem="brs-hT-NLf" secondAttribute="leading" id="LzZ-vx-9i5"/>
                             <constraint firstItem="cp3-mL-uAF" firstAttribute="leading" secondItem="hVc-nE-voP" secondAttribute="leading" id="UTI-pj-RB8"/>
                             <constraint firstAttribute="trailing" secondItem="z30-48-mXk" secondAttribute="trailing" id="UVu-aF-vzC"/>
+                            <constraint firstItem="8hU-69-hTg" firstAttribute="trailing" secondItem="gh4-RF-5uI" secondAttribute="trailing" id="WGH-5M-vb7"/>
+                            <constraint firstItem="8hU-69-hTg" firstAttribute="leading" secondItem="gh4-RF-5uI" secondAttribute="leading" id="e2I-cY-nra"/>
                             <constraint firstAttribute="trailing" secondItem="qwq-cZ-RTk" secondAttribute="trailing" id="gS4-Kn-rgm"/>
-                            <constraint firstItem="brs-hT-NLf" firstAttribute="bottom" secondItem="gh4-RF-5uI" secondAttribute="bottom" constant="80" id="mUN-xN-ST4"/>
+                            <constraint firstItem="8hU-69-hTg" firstAttribute="bottom" secondItem="gh4-RF-5uI" secondAttribute="bottom" id="mEj-fD-5fR"/>
                             <constraint firstItem="z30-48-mXk" firstAttribute="top" secondItem="x6u-NA-CBg" secondAttribute="top" id="owU-dd-2lM"/>
                             <constraint firstItem="z30-48-mXk" firstAttribute="leading" secondItem="brs-hT-NLf" secondAttribute="leading" id="puw-zQ-jew"/>
                             <constraint firstItem="2NV-aG-8fZ" firstAttribute="trailing" secondItem="fnx-aA-cEg" secondAttribute="trailing" id="w2R-EE-Sdh"/>
@@ -453,6 +457,9 @@
         <image name="menu" width="32" height="32"/>
         <image name="placeholderEventDetail" width="315" height="177"/>
         <image name="socialSpace" width="53" height="51.666667938232422"/>
+        <namedColor name="appRed">
+            <color red="0.94509803921568625" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="theme">
             <color red="0.035294117647058823" green="0.027450980392156862" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

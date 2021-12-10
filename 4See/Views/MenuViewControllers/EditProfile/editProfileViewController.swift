@@ -8,10 +8,9 @@
 import UIKit
 import SideMenu
 
-class editProfileViewController: BaseViewController {
-    override class var storyboardIdentifier: String
-    {
-        return "editProfileViewController"
+class EditProfileViewController: BaseViewController {
+    override class var storyboardIdentifier: String {
+        return "EditProfileViewController"
     }
     
     @IBOutlet weak var profileImg: UIImageView!
@@ -124,7 +123,7 @@ class editProfileViewController: BaseViewController {
     
 }
 
-extension editProfileViewController {
+extension EditProfileViewController {
     
     func updateUserProfile() {
         viewModel.setValues( contactTFT.text!, contactTFT.text!, contactTFT.text!, contactTFT.text!)

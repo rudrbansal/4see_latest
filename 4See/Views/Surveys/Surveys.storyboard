@@ -225,10 +225,10 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="71.651785714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Survey Details View Controller-->
         <scene sceneID="s4d-Ks-z82">
             <objects>
-                <viewController storyboardIdentifier="SurveyDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2s2-hj-pG1" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2s2-hj-pG1" customClass="SurveyDetailsViewController" customModule="_See" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owz-9T-DrJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -240,7 +240,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="350" height="237"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-98-xrd">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderEventDetail" translatesAutoresizingMaskIntoConstraints="NO" id="vdn-98-xrd">
                                             <rect key="frame" x="24" y="0.0" width="302" height="160"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="160" id="rPg-ZN-usZ"/>
@@ -353,6 +353,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionStronglyDisagree:" destination="jPz-OJ-78M" eventType="touchUpInside" id="bHt-UZ-QCQ"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -403,6 +406,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionDisagree:" destination="jPz-OJ-78M" eventType="touchUpInside" id="Ago-LM-bHU"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -453,6 +459,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionNeutral:" destination="jPz-OJ-78M" eventType="touchUpInside" id="fB3-mX-EFs"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -503,6 +512,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionAgree:" destination="jPz-OJ-78M" eventType="touchUpInside" id="ih2-Uf-b8b"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -553,6 +565,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionStronglyAgree:" destination="jPz-OJ-78M" eventType="touchUpInside" id="eBg-lD-tAG"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -585,6 +600,20 @@
                                                 <constraint firstItem="bad-TQ-18U" firstAttribute="leading" secondItem="8bq-9Q-TGE" secondAttribute="leading" id="SCZ-Q2-AzY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="agreeSelectionLabel" destination="pHB-nc-wYw" id="vTG-hW-DTG"/>
+                                            <outlet property="btnAgree" destination="c21-0w-V0q" id="0cf-F1-gBK"/>
+                                            <outlet property="btnDisagree" destination="Nb3-lV-lyC" id="jir-z8-Jgm"/>
+                                            <outlet property="btnNeutral" destination="aFV-eF-aqx" id="f4N-2x-ctp"/>
+                                            <outlet property="btnStronglyAgree" destination="orz-eo-nEt" id="uTe-02-pDL"/>
+                                            <outlet property="btnStronglyDisagree" destination="wh6-a5-W8l" id="vp1-uQ-SAa"/>
+                                            <outlet property="disagreeSelectionLabel" destination="dyQ-bQ-Izz" id="DjN-sc-JQB"/>
+                                            <outlet property="lblQuestion" destination="bad-TQ-18U" id="IuL-OG-WlC"/>
+                                            <outlet property="lblQuestionNumber" destination="8bq-9Q-TGE" id="i37-nq-EDp"/>
+                                            <outlet property="neutralSelectionLabel" destination="L4t-fv-gd3" id="FRg-Xx-mE9"/>
+                                            <outlet property="stronglyAgreeSelectionLabel" destination="ZLr-wi-urW" id="Dhm-45-CeS"/>
+                                            <outlet property="stronglyDisagreeSelectionLabel" destination="5wp-uV-dyh" id="yXn-JE-Ear"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SurveyDetailsDualOptionsTableViewCell" rowHeight="120" id="rfN-Jl-br8" customClass="SurveyDetailsDualOptionsTableViewCell" customModule="_See" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="401.5" width="350" height="120"/>
@@ -643,6 +672,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionYes:" destination="rfN-Jl-br8" eventType="touchUpInside" id="Q3t-Cu-MRG"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -693,6 +725,9 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="69.5"/>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain"/>
+                                                                    <connections>
+                                                                        <action selector="btnActionNo:" destination="rfN-Jl-br8" eventType="touchUpInside" id="uvc-ex-SoS"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -725,6 +760,14 @@
                                                 <constraint firstItem="7Y9-4K-H96" firstAttribute="top" secondItem="0EO-Oe-dcy" secondAttribute="top" constant="8" id="vdw-ae-eGV"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnNo" destination="uXs-TF-Ncz" id="3oL-BW-epi"/>
+                                            <outlet property="btnYes" destination="KSR-Ya-yxL" id="kPv-uR-mQV"/>
+                                            <outlet property="disagreeSelectionLabel" destination="yn5-NU-Ywk" id="B7I-RX-LxY"/>
+                                            <outlet property="questionLabel" destination="r0n-H9-tU2" id="iYh-41-GiR"/>
+                                            <outlet property="questionNumberLabel" destination="7Y9-4K-H96" id="QTy-NO-hID"/>
+                                            <outlet property="stronglyDisagreeSelectionLabel" destination="7Y9-4K-H96" id="9wl-JQ-aOi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -746,6 +789,9 @@
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Arrow_back"/>
+                                        <connections>
+                                            <action selector="btnActionBack:" destination="2s2-hj-pG1" eventType="touchUpInside" id="zdx-Wp-l4L"/>
+                                        </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3sixtyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="8sA-yq-uTY">
                                         <rect key="frame" x="107" y="54" width="200" height="32"/>
@@ -819,6 +865,10 @@
                             <constraint firstItem="94H-AT-sAu" firstAttribute="leading" secondItem="3MX-NA-pH4" secondAttribute="leading" id="sm1-Fc-AOg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="Jby-vY-aQH" id="r2V-A0-Ng2"/>
+                        <outlet property="surveyTableView" destination="EvQ-QA-wWb" id="n0m-g3-HhX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zss-24-vSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -830,6 +880,7 @@
         <image name="Arrow_back" width="10" height="17"/>
         <image name="checklist" width="18.5" height="18.5"/>
         <image name="menu" width="32" height="32"/>
+        <image name="placeholderEventDetail" width="315" height="177"/>
         <image name="socialSpace" width="53" height="51.5"/>
         <namedColor name="theme">
             <color red="0.035294117647058823" green="0.027450980392156862" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

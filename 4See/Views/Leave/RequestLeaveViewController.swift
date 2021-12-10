@@ -16,16 +16,22 @@ class RequestLeaveViewController: UIViewController {
     @IBOutlet weak var leavespickerView: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    @IBOutlet weak var btnBack: UIButton!
+    
     let leaveOptions = ["Annual", "Family responsibility", "Religious", "Other"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         datePicker.minimumDate = Date()
-        // Do any additional setup after loading the view.
+        btnBack.setTitle("", for: .normal)
     }
     
     @IBAction func btnActionSubmit(_ sender: UIButton) {
         
+    }
+    
+    @IBAction func btnActionBack(_ sender: UIButton) {
+        navigationController?.popViewController()
     }
     
     func getAlert() {

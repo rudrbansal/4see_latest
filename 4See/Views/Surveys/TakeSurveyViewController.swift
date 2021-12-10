@@ -40,7 +40,7 @@ extension TakeSurveyViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Surveys", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "EventDetailViewController") as! EventDetailViewController
+        let vc = storyboard.instantiateViewController(withIdentifier: "SurveyDetailsViewController") as! SurveyDetailsViewController
         navigationController?.pushViewController(vc, completion: nil)
     }
 }
