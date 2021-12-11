@@ -19,6 +19,7 @@ class CovidProtocolsViewController: BaseViewController {
         covidProtocolsTableView.dataSource = self
         covidProtocolsTableView.delegate = self
         covidProtocolsTableView.reloadData()
+        btnBack.setTitle("", for: .normal)
     }
     
     @IBAction func btnActionBack(_ sender: UIButton) {
