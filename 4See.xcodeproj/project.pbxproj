@@ -165,7 +165,6 @@
 		17BCD1BC275F8C4900A76F31 /* RequestLeaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BCD1BB275F8C4900A76F31 /* RequestLeaveViewController.swift */; };
 		17BCD1BF275FB8E900A76F31 /* ToolsOfTrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BCD1BE275FB8E900A76F31 /* ToolsOfTrade.storyboard */; };
 		17BCD1C1275FBCB500A76F31 /* ToolsOfTradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BCD1C0275FBCB500A76F31 /* ToolsOfTradeViewController.swift */; };
-		17BCD1C4275FD30400A76F31 /* BrainStrom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BCD1C3275FD30400A76F31 /* BrainStrom.storyboard */; };
 		17C736232625C5B70085C2DE /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C736222625C5B70085C2DE /* NotesModel.swift */; };
 		17C736262625C5CA0085C2DE /* NotesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C736252625C5CA0085C2DE /* NotesRequest.swift */; };
 		17C7362A2625C5E50085C2DE /* NotesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C736292625C5E50085C2DE /* NotesResponse.swift */; };
@@ -180,6 +179,8 @@
 		17CF61E625F25053007B0339 /* archiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CF61E425F25053007B0339 /* archiveCell.xib */; };
 		17CF61EC25F25746007B0339 /* sick_announceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF61EA25F25746007B0339 /* sick_announceViewController.swift */; };
 		17CF61ED25F25746007B0339 /* sick_announceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CF61EB25F25746007B0339 /* sick_announceViewController.xib */; };
+		17D860A6276451DE00B14534 /* BrainStrom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17D860A5276451DE00B14534 /* BrainStrom.storyboard */; };
+		17D860A82764521000B14534 /* SubmitAnIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17D860A72764521000B14534 /* SubmitAnIdeaViewController.swift */; };
 		17E0A30B26429BD600DE10AE /* privacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E0A30926429BD600DE10AE /* privacyPolicy.swift */; };
 		17E0A30C26429BD600DE10AE /* privacyPolicy.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17E0A30A26429BD600DE10AE /* privacyPolicy.xib */; };
 		17E5E1AA26305BCC0087E52A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E5E1A926305BCC0087E52A /* RegisterModel.swift */; };
@@ -367,7 +368,6 @@
 		17BCD1BB275F8C4900A76F31 /* RequestLeaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLeaveViewController.swift; sourceTree = "<group>"; };
 		17BCD1BE275FB8E900A76F31 /* ToolsOfTrade.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToolsOfTrade.storyboard; sourceTree = "<group>"; };
 		17BCD1C0275FBCB500A76F31 /* ToolsOfTradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsOfTradeViewController.swift; sourceTree = "<group>"; };
-		17BCD1C3275FD30400A76F31 /* BrainStrom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrainStrom.storyboard; sourceTree = "<group>"; };
 		17C736222625C5B70085C2DE /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		17C736252625C5CA0085C2DE /* NotesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRequest.swift; sourceTree = "<group>"; };
 		17C736292625C5E50085C2DE /* NotesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesResponse.swift; sourceTree = "<group>"; };
@@ -382,6 +382,8 @@
 		17CF61E425F25053007B0339 /* archiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = archiveCell.xib; sourceTree = "<group>"; };
 		17CF61EA25F25746007B0339 /* sick_announceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sick_announceViewController.swift; sourceTree = "<group>"; };
 		17CF61EB25F25746007B0339 /* sick_announceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = sick_announceViewController.xib; sourceTree = "<group>"; };
+		17D860A5276451DE00B14534 /* BrainStrom.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BrainStrom.storyboard; sourceTree = "<group>"; };
+		17D860A72764521000B14534 /* SubmitAnIdeaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubmitAnIdeaViewController.swift; sourceTree = "<group>"; };
 		17E0A30926429BD600DE10AE /* privacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = privacyPolicy.swift; sourceTree = "<group>"; };
 		17E0A30A26429BD600DE10AE /* privacyPolicy.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = privacyPolicy.xib; sourceTree = "<group>"; };
 		17E5E1A926305BCC0087E52A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -1137,8 +1139,9 @@
 		17BCD1C2275FD30400A76F31 /* BrainStrom */ = {
 			isa = PBXGroup;
 			children = (
-				17BCD1C3275FD30400A76F31 /* BrainStrom.storyboard */,
+				17D860A5276451DE00B14534 /* BrainStrom.storyboard */,
 				17769C7027607EB200F472EF /* PublishedSubmissionViewController.swift */,
+				17D860A72764521000B14534 /* SubmitAnIdeaViewController.swift */,
 				17769C6E276075B200F472EF /* SubmitIdeaViewController.swift */,
 				17769C6C27601AE000F472EF /* SelectCategoryViewController.swift */,
 			);
@@ -1273,7 +1276,6 @@
 				17A67F0225EF819400FE67E3 /* Frameworks */,
 				17A67F0325EF819400FE67E3 /* Resources */,
 				BAF34D085D4256B5AAFE8B60 /* [CP] Embed Pods Frameworks */,
-				49DFECAD20624A1C314BB8E8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1365,7 +1367,7 @@
 				17359C9025F10CBA004DAC48 /* announceDetailsVC.xib in Resources */,
 				176B96E425F110BC00ACE830 /* attendanceVC.xib in Resources */,
 				17A67F9E25EF896500FE67E3 /* Roboto-Regular.ttf in Resources */,
-				17BCD1C4275FD30400A76F31 /* BrainStrom.storyboard in Resources */,
+				17D860A6276451DE00B14534 /* BrainStrom.storyboard in Resources */,
 				17A67F9D25EF896500FE67E3 /* Roboto-Light.ttf in Resources */,
 				17359C8A25F1074D004DAC48 /* announcementCell.xib in Resources */,
 				172C9CA825F0F5D7003AB82E /* editToolsViewController.xib in Resources */,
@@ -1395,23 +1397,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		49DFECAD20624A1C314BB8E8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-4See/Pods-4See-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-4See/Pods-4See-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-4See/Pods-4See-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		BAF34D085D4256B5AAFE8B60 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1498,6 +1483,7 @@
 				3823E8262650360A00A99A5C /* ReminderViewModel.swift in Sources */,
 				17A67F0925EF819400FE67E3 /* AppDelegate.swift in Sources */,
 				1799D83F2613031F00AC42FE /* LocationModel.swift in Sources */,
+				17D860A82764521000B14534 /* SubmitAnIdeaViewController.swift in Sources */,
 				17C736302625C75D0085C2DE /* notesViewHandler.swift in Sources */,
 				17070AF226047FF40079E079 /* CountrySelectModel.swift in Sources */,
 				17115CFA260868E100AC76BA /* forgetPasswordVC.swift in Sources */,
@@ -1760,6 +1746,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.4See.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

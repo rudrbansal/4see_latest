@@ -47,43 +47,28 @@ class EditProfileViewController: BaseViewController {
 
     func dataSetup() {
         Global.getDataFromUserDefaults(.userData)
-//        nameLbl.text = "Welcome \(AppConfig.loggedInUser!.userInfo!.name!)"
-//        postLBL.text = UserDefaults.standard.value(forKey: "jobTitle") as! String + " - " + AppConfig.loggedInUser!.userInfo!.department!
-//        contactTFT.text = UserDefaults.standard.value(forKey: "phone") as! String
-//        emailTFT.text = UserDefaults.standard.value(forKey: "email") as! String
-//        addressTFT.text = UserDefaults.standard.value(forKey: "address") as! String
-//        typeTFT.text = UserDefaults.standard.value(forKey: "vechileNumber") as! String
-//        deptLBL.text = AppConfig.loggedInUser!.userInfo!.department!
-//        reportLineLbl.text = AppConfig.loggedInUser!.userInfo!.reportLine!
-//        payrollLbl.text = String(describing: AppConfig.loggedInUser!.userInfo!.payroll!)
-//        idnrLbl.text = AppConfig.loggedInUser!.userInfo!.idNr!
-//        jobTitleLbl.text = UserDefaults.standard.value(forKey: "jobTitle") as! String
+        contactTFT.text = AppConfig.loggedInUser!.userInfo!.phone//UserDefaults.standard.value(forKey: "phone") as! String
+        deptLBL.text = AppConfig.loggedInUser!.userInfo!.department!
+        reportLineLbl.text = AppConfig.loggedInUser!.userInfo!.reportLine!
+        payrollLbl.text = String(describing: AppConfig.loggedInUser!.userInfo!.payroll!)
+        idnrLbl.text = AppConfig.loggedInUser!.userInfo!.idNr!
+        jobTitleLbl.text = AppConfig.loggedInUser!.userInfo!.jobTitle!
     
-//        let img = UserDefaults.standard.value(forKey: "image") as! String
-//        print(UrlConfig.IMAGE_URL+(img as! String))
-//        profileImg.setImageOnView(UrlConfig.IMAGE_URL+(img as! String))
+        let img = UserDefaults.standard.value(forKey: "image") as! String
+        profileImg.setImageOnView(UrlConfig.IMAGE_URL+(img ))
         
-//        if let gender = UserDefaults.standard.value(forKey: "gender") as? String, gender == "Female" {
-//            genderSegment.selectedSegmentIndex = 1
-//            viewModel.gender = "Female"
-//        } else {
-//            genderSegment.selectedSegmentIndex = 0
-//            viewModel.gender = "Male"
-//        }
     }
     
     @IBAction func btnActionBack(_ sender: Any) {
         self.navigationController?.popViewController()
     }
     
-    @IBAction func menuBtnAction(_ sender: Any)
-    {
+    @IBAction func menuBtnAction(_ sender: Any) {
         present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
 
     }
     
-    @IBAction func openImagePickerBtn(_ sender: Any)
-    {
+    @IBAction func openImagePickerBtn(_ sender: Any) {
         self.openImagePopUp { (pickerImage) in
             if let image = pickerImage {
                 self.viewModel.attachments.append(image)
@@ -92,8 +77,7 @@ class EditProfileViewController: BaseViewController {
         }
     }
     
-    @IBAction func editBtnAction(_ sender: Any)
-    {
+    @IBAction func editBtnAction(_ sender: Any) {
         switch (sender as AnyObject).tag {
         case 1:
             contactTFT.becomeFirstResponder()

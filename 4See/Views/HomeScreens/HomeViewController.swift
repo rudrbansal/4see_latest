@@ -21,6 +21,7 @@ class HomeViewController: BaseViewController {
     @IBOutlet weak var surveyBtn: UIButton!
     @IBOutlet weak var socialSpaceBtn: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     let viewModel = announcementViewModel()
     let vModel = attendanceViewModel()
@@ -149,9 +150,8 @@ class HomeViewController: BaseViewController {
         Global.getDataFromUserDefaults(.userData)
 //        nameLbl.text = "Welcome \(AppConfig.loggedInUser!.userInfo!.name!.firstCapitalized)"
 //        jobLbl.text = UserDefaults.standard.value(forKey: "jobTitle") as! String + " - " + AppConfig.loggedInUser!.userInfo!.department!
-//        let img = UserDefaults.standard.value(forKey: "image") as! String
-//        print(UrlConfig.IMAGE_URL+(img as! String))
-//        imgVW.setImageOnView(UrlConfig.IMAGE_URL+img.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        let img = UserDefaults.standard.value(forKey: "image") as! String
+        profileImageView.setImageOnView(UrlConfig.IMAGE_URL+img.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
 //        logoImg.setImageOnView(UrlConfig.IMAGE_URL+AppConfig.loggedInUser!.userInfo!.companyId!.image!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     }
     
