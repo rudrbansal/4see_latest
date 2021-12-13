@@ -69,14 +69,13 @@ class biometricsVC: BaseViewController
     }
     //MARK:- SideMenu Function
     
-    func initSideMenuView()
-    {
+    func initSideMenuView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
     }
-    func permissions()
-    {
+    
+    func permissions() {
         let alert = UIAlertController(title: "4See ", message: "Please add your biometric authntication to move further.", preferredStyle: UIAlertController.Style.alert)
         
         let cancelAction = UIAlertAction(title: "CANCEL", style: .default, handler: { action in
@@ -91,8 +90,7 @@ class biometricsVC: BaseViewController
         self.present(alert, animated: true, completion: nil)
     }
     
-    func biomatrics()
-    {
+    func biomatrics() {
         let myContext = LAContext()
         var authError: NSError?
         let myLocalizedReasonString = "Biometric Authntication !! "

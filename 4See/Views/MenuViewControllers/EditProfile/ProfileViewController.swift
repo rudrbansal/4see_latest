@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import SideMenu
 
 class ProfileViewController: BaseViewController {
     
@@ -34,6 +35,7 @@ class ProfileViewController: BaseViewController {
         btnBack.setTitle("", for: .normal)
         dataSetup()
         setupLocationManager()
+        initSideMenuView()
     }
     
     func setupLocationManager() {
@@ -122,7 +124,6 @@ class ProfileViewController: BaseViewController {
         emailLabel.text = AppConfig.loggedInUser!.userInfo!.email
         let img = UserDefaults.standard.value(forKey: "image") as! String
         profileImageView.setImageOnView(UrlConfig.IMAGE_URL+img.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-//        logoImg.setImageOnView(UrlConfig.IMAGE_URL+AppConfig.loggedInUser!.userInfo!.companyId!.image!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     }
 
     func openSettings() {
@@ -135,6 +136,15 @@ class ProfileViewController: BaseViewController {
         }))
         
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
     }
     
     @IBAction func btnActionEdit(_ sender: UIButton) {

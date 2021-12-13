@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import SideMenu
 
 class SurveyDetailsViewController: UIViewController {
     
     @IBOutlet weak var surveyTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
+    
+    var questions = ["Do you like fruit?", "Would you like free fruit in the work place?", "Will free fruit increase productivity?", "Do you think fruit is good for you?"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,8 +21,18 @@ class SurveyDetailsViewController: UIViewController {
         surveyTableView.delegate = self
         surveyTableView.reloadData()
         btnBack.setTitle("", for: .normal)
+        initSideMenuView()
     }
     
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+
     @IBAction func btnActionBack(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -27,12 +40,12 @@ class SurveyDetailsViewController: UIViewController {
 
 extension SurveyDetailsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return questions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var tableCell = UITableViewCell()
-        if indexPath.row == 0 {
+        if indexPath.row == 0 || indexPath.row == 2 {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SurveyDetailsMultipleOptionsTableViewCell")as! SurveyDetailsMultipleOptionsTableViewCell
         cell.btnStronglyDisagree.setTitle("", for: .normal)
         cell.btnDisagree.setTitle("", for: .normal)
@@ -45,10 +58,7 @@ extension SurveyDetailsViewController: UITableViewDataSource, UITableViewDelegat
         cell.neutralSelectionLabel.backgroundColor = .white
         cell.agreeSelectionLabel.backgroundColor = .white
             tableCell = cell
-        } else if indexPath.row == 1 {
-//            return cell
-//        } else if indexPath.row == 1 {
-//            let cell = SurveyDetailsDualOptionsTableViewCell()
+        } else if indexPath.row == 1 || indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "SurveyDetailsDualOptionsTableViewCell")as! SurveyDetailsDualOptionsTableViewCell
             cell.btnNo.setTitle("", for: .normal)
             cell.btnYes.setTitle("", for: .normal)
@@ -56,7 +66,6 @@ extension SurveyDetailsViewController: UITableViewDataSource, UITableViewDelegat
             
             cell.disagreeSelectionLabel.backgroundColor = .white
             tableCell = cell
-////            return cell
         }
         return tableCell
     }

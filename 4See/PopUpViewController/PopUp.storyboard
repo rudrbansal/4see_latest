@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Pop Up View Controller-->
+        <scene sceneID="s6X-Bg-my6">
+            <objects>
+                <viewController storyboardIdentifier="PopUpViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SQc-ge-bzZ" customClass="PopUpViewController" customModule="_See" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XyA-iS-niM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zug-09-lch">
+                                <rect key="frame" x="30" y="393" width="354" height="110.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-qd-pyC">
+                                        <rect key="frame" x="332" y="4" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="18" id="4ES-ah-HRt"/>
+                                            <constraint firstAttribute="width" secondItem="KFS-qd-pyC" secondAttribute="height" id="d4x-fF-rnm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <backgroundConfiguration key="background" image="AddCross" imageContentMode="scaleAspectFit"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="crossBtnAction:" destination="SQc-ge-bzZ" eventType="touchUpInside" id="rZL-f4-cwt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Removed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbG-mX-8Wf">
+                                        <rect key="frame" x="8" y="12" width="338" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DVj-pU-nbM">
+                                        <rect key="frame" x="0.0" y="45.5" width="354" height="1"/>
+                                        <color key="backgroundColor" name="appRed"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="HQu-Pt-UUi"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuz-T7-wad">
+                                        <rect key="frame" x="8" y="58.5" width="338" height="18"/>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Uuz-T7-wad" secondAttribute="bottom" constant="34" id="0Ia-S9-raP"/>
+                                    <constraint firstItem="fbG-mX-8Wf" firstAttribute="leading" secondItem="zug-09-lch" secondAttribute="leading" constant="8" id="7c3-ws-5Iv"/>
+                                    <constraint firstItem="fbG-mX-8Wf" firstAttribute="top" secondItem="zug-09-lch" secondAttribute="top" constant="12" id="9Kv-AD-iif"/>
+                                    <constraint firstItem="KFS-qd-pyC" firstAttribute="top" secondItem="zug-09-lch" secondAttribute="top" constant="4" id="C50-c7-1Da"/>
+                                    <constraint firstItem="fbG-mX-8Wf" firstAttribute="centerX" secondItem="zug-09-lch" secondAttribute="centerX" id="CdW-LB-orU"/>
+                                    <constraint firstAttribute="trailing" secondItem="DVj-pU-nbM" secondAttribute="trailing" id="Fo4-FI-mwE"/>
+                                    <constraint firstItem="Uuz-T7-wad" firstAttribute="centerX" secondItem="zug-09-lch" secondAttribute="centerX" id="PJk-jz-efg"/>
+                                    <constraint firstItem="DVj-pU-nbM" firstAttribute="leading" secondItem="zug-09-lch" secondAttribute="leading" id="V3X-v2-6I9"/>
+                                    <constraint firstItem="DVj-pU-nbM" firstAttribute="top" secondItem="fbG-mX-8Wf" secondAttribute="bottom" constant="10" id="Y4N-0R-72Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="KFS-qd-pyC" secondAttribute="trailing" constant="4" id="dik-dc-tE9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Uuz-T7-wad" secondAttribute="trailing" constant="8" id="gCN-JI-IuS"/>
+                                    <constraint firstItem="Uuz-T7-wad" firstAttribute="top" secondItem="DVj-pU-nbM" secondAttribute="bottom" constant="12" id="h1h-cK-vc5"/>
+                                    <constraint firstAttribute="trailing" secondItem="fbG-mX-8Wf" secondAttribute="trailing" constant="8" id="mdr-qI-saF"/>
+                                    <constraint firstItem="Uuz-T7-wad" firstAttribute="leading" secondItem="zug-09-lch" secondAttribute="leading" constant="8" id="zkg-27-uwm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qd2-vD-c6t"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.74720612582781454" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qd2-vD-c6t" firstAttribute="trailing" secondItem="zug-09-lch" secondAttribute="trailing" constant="30" id="a5Q-He-xWC"/>
+                            <constraint firstItem="zug-09-lch" firstAttribute="leading" secondItem="qd2-vD-c6t" secondAttribute="leading" constant="30" id="n12-W2-XiG"/>
+                            <constraint firstItem="zug-09-lch" firstAttribute="centerX" secondItem="XyA-iS-niM" secondAttribute="centerX" id="r18-Qc-stR"/>
+                            <constraint firstItem="zug-09-lch" firstAttribute="centerY" secondItem="XyA-iS-niM" secondAttribute="centerY" id="zMN-FJ-1Rq"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <connections>
+                        <outlet property="btnBack" destination="KFS-qd-pyC" id="qkm-Ye-KgR"/>
+                        <outlet property="lblMessage" destination="Uuz-T7-wad" id="jUe-zv-Sp8"/>
+                        <outlet property="lblTitle" destination="fbG-mX-8Wf" id="qCg-Fo-kgt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IOe-qC-qbP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2718.840579710145" y="62.946428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AddCross" width="26" height="26"/>
+        <namedColor name="appRed">
+            <color red="0.94509803921568625" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

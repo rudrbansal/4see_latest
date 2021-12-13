@@ -71,17 +71,10 @@ extension loginViewController {
         viewModel.loginUser { (status, message) in
             super.hideProgressBar()
             if status {
-//                let objc = HomeViewController()
-//                self.navigationController?.pushViewController(objc)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                
                 let objLogoutVC = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-//                let navigationController = UINavigationController(rootViewController: objLogoutVC)
-    //            let navigationController = UINavigationController(rootViewController: objLogoutVC)
                 self.navigationController?.navigationBar.isTranslucent = false
                 self.navigationController?.navigationBar.isHidden = true
-//                self.window?.rootViewController = navigationController
-//                self.window?.makeKeyAndVisible()
                 self.navigationController?.pushViewController(objLogoutVC, animated: true)
             } else {
                 self.showToast(message)

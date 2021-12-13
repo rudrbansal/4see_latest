@@ -53,6 +53,7 @@ extension AttendanceViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AttendanceTableViewCell") as! AttendanceTableViewCell
         cell.toDoListLabel.text = options[indexPath.row]
+        cell.dropDownButton.setTitle("", for: .normal)
         return cell
     }
 }

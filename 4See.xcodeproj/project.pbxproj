@@ -163,7 +163,6 @@
 		17A704BB261DD55A00AF43CF /* dataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17A704BA261DD55A00AF43CF /* dataCell.xib */; };
 		17A704BE261DD56B00AF43CF /* dataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A704BD261DD56B00AF43CF /* dataCell.swift */; };
 		17BCD1BC275F8C4900A76F31 /* RequestLeaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BCD1BB275F8C4900A76F31 /* RequestLeaveViewController.swift */; };
-		17BCD1BF275FB8E900A76F31 /* ToolsOfTrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17BCD1BE275FB8E900A76F31 /* ToolsOfTrade.storyboard */; };
 		17BCD1C1275FBCB500A76F31 /* ToolsOfTradeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BCD1C0275FBCB500A76F31 /* ToolsOfTradeViewController.swift */; };
 		17C736232625C5B70085C2DE /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C736222625C5B70085C2DE /* NotesModel.swift */; };
 		17C736262625C5CA0085C2DE /* NotesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C736252625C5CA0085C2DE /* NotesRequest.swift */; };
@@ -175,6 +174,13 @@
 		17C999BC26173997009383BC /* webVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C999BA26173997009383BC /* webVC.swift */; };
 		17C999BD26173997009383BC /* webVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17C999BB26173997009383BC /* webVC.xib */; };
 		17CAAD86263C43EC0014DF9A /* WKWebViewDownloadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CAAD85263C43EC0014DF9A /* WKWebViewDownloadHelper.swift */; };
+		17CF0C4F27652A2700384BCC /* ToolsOfTradeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF0C4E27652A2600384BCC /* ToolsOfTradeHandler.swift */; };
+		17CF0C5127652A3000384BCC /* ToolsOfTradeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF0C5027652A2F00384BCC /* ToolsOfTradeViewModel.swift */; };
+		17CF0C5327652A5E00384BCC /* AddToolPlusCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF0C5227652A5E00384BCC /* AddToolPlusCollectionViewCell.swift */; };
+		17CF0C5527652A6A00384BCC /* AddToolCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF0C5427652A6A00384BCC /* AddToolCollectionViewCell.swift */; };
+		17CF0C5727652B3C00384BCC /* ToolsOfTrade.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CF0C5627652B3C00384BCC /* ToolsOfTrade.storyboard */; };
+		17CF0C5A2766239200384BCC /* PopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17CF0C592766239200384BCC /* PopUp.storyboard */; };
+		17CF0C5E276623D600384BCC /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF0C5D276623D600384BCC /* PopUpViewController.swift */; };
 		17CF61E525F25053007B0339 /* archiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF61E325F25053007B0339 /* archiveCell.swift */; };
 		17CF61E625F25053007B0339 /* archiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17CF61E425F25053007B0339 /* archiveCell.xib */; };
 		17CF61EC25F25746007B0339 /* sick_announceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CF61EA25F25746007B0339 /* sick_announceViewController.swift */; };
@@ -366,7 +372,6 @@
 		17A704BA261DD55A00AF43CF /* dataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = dataCell.xib; sourceTree = "<group>"; };
 		17A704BD261DD56B00AF43CF /* dataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataCell.swift; sourceTree = "<group>"; };
 		17BCD1BB275F8C4900A76F31 /* RequestLeaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLeaveViewController.swift; sourceTree = "<group>"; };
-		17BCD1BE275FB8E900A76F31 /* ToolsOfTrade.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ToolsOfTrade.storyboard; sourceTree = "<group>"; };
 		17BCD1C0275FBCB500A76F31 /* ToolsOfTradeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolsOfTradeViewController.swift; sourceTree = "<group>"; };
 		17C736222625C5B70085C2DE /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		17C736252625C5CA0085C2DE /* NotesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesRequest.swift; sourceTree = "<group>"; };
@@ -378,6 +383,13 @@
 		17C999BA26173997009383BC /* webVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webVC.swift; sourceTree = "<group>"; };
 		17C999BB26173997009383BC /* webVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = webVC.xib; sourceTree = "<group>"; };
 		17CAAD85263C43EC0014DF9A /* WKWebViewDownloadHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewDownloadHelper.swift; sourceTree = "<group>"; };
+		17CF0C4E27652A2600384BCC /* ToolsOfTradeHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsOfTradeHandler.swift; sourceTree = "<group>"; };
+		17CF0C5027652A2F00384BCC /* ToolsOfTradeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsOfTradeViewModel.swift; sourceTree = "<group>"; };
+		17CF0C5227652A5E00384BCC /* AddToolPlusCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToolPlusCollectionViewCell.swift; sourceTree = "<group>"; };
+		17CF0C5427652A6A00384BCC /* AddToolCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddToolCollectionViewCell.swift; sourceTree = "<group>"; };
+		17CF0C5627652B3C00384BCC /* ToolsOfTrade.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ToolsOfTrade.storyboard; sourceTree = "<group>"; };
+		17CF0C592766239200384BCC /* PopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PopUp.storyboard; sourceTree = "<group>"; };
+		17CF0C5D276623D600384BCC /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		17CF61E325F25053007B0339 /* archiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = archiveCell.swift; sourceTree = "<group>"; };
 		17CF61E425F25053007B0339 /* archiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = archiveCell.xib; sourceTree = "<group>"; };
 		17CF61EA25F25746007B0339 /* sick_announceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sick_announceViewController.swift; sourceTree = "<group>"; };
@@ -963,6 +975,7 @@
 				17178F7F25F1F87100D99DA4 /* Config */,
 				17A67F5925EF824C00FE67E3 /* Delegates */,
 				17A67F5425EF820500FE67E3 /* Views */,
+				17CF0C582766236800384BCC /* PopUpViewController */,
 				172D993F26240B0400AEB94F /* 4See-Bridging-Header.h */,
 			);
 			path = 4See;
@@ -1129,8 +1142,12 @@
 		17BCD1BD275FB8C400A76F31 /* ToolsOfTrade */ = {
 			isa = PBXGroup;
 			children = (
-				17BCD1BE275FB8E900A76F31 /* ToolsOfTrade.storyboard */,
+				17CF0C5627652B3C00384BCC /* ToolsOfTrade.storyboard */,
 				17BCD1C0275FBCB500A76F31 /* ToolsOfTradeViewController.swift */,
+				17CF0C4E27652A2600384BCC /* ToolsOfTradeHandler.swift */,
+				17CF0C5027652A2F00384BCC /* ToolsOfTradeViewModel.swift */,
+				17CF0C5227652A5E00384BCC /* AddToolPlusCollectionViewCell.swift */,
+				17CF0C5427652A6A00384BCC /* AddToolCollectionViewCell.swift */,
 				17769C6A27600E2E00F472EF /* AddToolViewController.swift */,
 			);
 			path = ToolsOfTrade;
@@ -1174,6 +1191,15 @@
 				17C999BB26173997009383BC /* webVC.xib */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		17CF0C582766236800384BCC /* PopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17CF0C592766239200384BCC /* PopUp.storyboard */,
+				17CF0C5D276623D600384BCC /* PopUpViewController.swift */,
+			);
+			path = PopUpViewController;
 			sourceTree = "<group>";
 		};
 		17CF61E225F25035007B0339 /* cell */ = {
@@ -1352,7 +1378,6 @@
 				17A67FA525EF896500FE67E3 /* Roboto-BlackItalic.ttf in Resources */,
 				172C9CA025F0EE9B003AB82E /* addcell.xib in Resources */,
 				1766DD87261ECC41003291AC /* infoCell.xib in Resources */,
-				17BCD1BF275FB8E900A76F31 /* ToolsOfTrade.storyboard in Resources */,
 				1775670E261C8CC70070FC40 /* LaunchScreen.storyboard in Resources */,
 				172FD2E8263957110059FDFA /* GoogleService-Info.plist in Resources */,
 				174EBAC9261C5FD700A39D39 /* notesVC.xib in Resources */,
@@ -1376,11 +1401,13 @@
 				17CF61ED25F25746007B0339 /* sick_announceViewController.xib in Resources */,
 				17C9991F2616EAA6009383BC /* fullViewVC.xib in Resources */,
 				176B96F025F115F700ACE830 /* policiesVC.xib in Resources */,
+				17CF0C5A2766239200384BCC /* PopUp.storyboard in Resources */,
 				17A67F1225EF819700FE67E3 /* Assets.xcassets in Resources */,
 				5CA737A22754093900130EB5 /* ToDoList.storyboard in Resources */,
 				176B96EA25F111B200ACE830 /* attendanceCell.xib in Resources */,
 				176B96FE25F1192600ACE830 /* messageVC.xib in Resources */,
 				171FCC58275F6944000B653D /* Leave.storyboard in Resources */,
+				17CF0C5727652B3C00384BCC /* ToolsOfTrade.storyboard in Resources */,
 				17A704BB261DD55A00AF43CF /* dataCell.xib in Resources */,
 				172C9CB525F0F7DC003AB82E /* imgsCell.xib in Resources */,
 				1766DD7A261ECAA1003291AC /* newaRegisterVCViewController.xib in Resources */,
@@ -1452,6 +1479,7 @@
 				17115D08260891E300AC76BA /* changePasswordVC.swift in Sources */,
 				17A67F0D25EF819400FE67E3 /* ViewController.swift in Sources */,
 				17070AD426047BE10079E079 /* UrlConfig.swift in Sources */,
+				17CF0C4F27652A2700384BCC /* ToolsOfTradeHandler.swift in Sources */,
 				1799D8162612FB9000AC42FE /* attendanceHandler.swift in Sources */,
 				176B96F625F1161D00ACE830 /* policyCell.swift in Sources */,
 				17A703AB261D6EE900AF43CF /* PolicyModel.swift in Sources */,
@@ -1498,8 +1526,10 @@
 				176F23272615C66F000F678A /* SickViewModel.swift in Sources */,
 				172C9CA725F0F5D7003AB82E /* editToolsViewController.swift in Sources */,
 				1735E654262D42C9006A9044 /* BossMessageModel.swift in Sources */,
+				17CF0C5127652A3000384BCC /* ToolsOfTradeViewModel.swift in Sources */,
 				17769C6B27600E2E00F472EF /* AddToolViewController.swift in Sources */,
 				1799D8132612FB8000AC42FE /* attendanceViewModel.swift in Sources */,
+				17CF0C5E276623D600384BCC /* PopUpViewController.swift in Sources */,
 				17359C8F25F10CBA004DAC48 /* announceDetailsVC.swift in Sources */,
 				1794141125F265DE00288E16 /* Global.swift in Sources */,
 				5CA737A12754093900130EB5 /* ToDoCollectionView.swift in Sources */,
@@ -1513,6 +1543,7 @@
 				17070B282604C24D0079E079 /* editProfileHandler.swift in Sources */,
 				17800FF5260E05F900F8EABA /* ProfileModel.swift in Sources */,
 				5CB5B2E22761D7030038BB98 /* SurveyDetailsViewController.swift in Sources */,
+				17CF0C5327652A5E00384BCC /* AddToolPlusCollectionViewCell.swift in Sources */,
 				5CA737A32754093900130EB5 /* ToDoListView.swift in Sources */,
 				17769C6D27601AE000F472EF /* SelectCategoryViewController.swift in Sources */,
 				178499C0260AF99C00A1776A /* AnnouncementResponse.swift in Sources */,
@@ -1540,6 +1571,7 @@
 				172863DC25F22AE80070153A /* remindVC.swift in Sources */,
 				176F23362615D162000F678A /* docCell.swift in Sources */,
 				1799D80D2612F99700AC42FE /* AttendanceRequest.swift in Sources */,
+				17CF0C5527652A6A00384BCC /* AddToolCollectionViewCell.swift in Sources */,
 				17769C6F276075B200F472EF /* SubmitIdeaViewController.swift in Sources */,
 				1764DC51275B489C00076F66 /* NotificationsViewController.swift in Sources */,
 				17070AD926047CCF0079E079 /* UserModel.swift in Sources */,

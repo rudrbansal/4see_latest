@@ -6,16 +6,27 @@
 //
 
 import UIKit
+import SideMenu
 
 class SubmitAnIdeaViewController: UIViewController {
-
+    
+    @IBOutlet weak var btnBack: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        initSideMenuView()
     }
     
-
-
-
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func backBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
 }

@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import SideMenu
 
 class SelectCategoryViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     
@@ -20,13 +21,23 @@ class SelectCategoryViewController: UIViewController {
         categoryTableView.delegate = self
         categoryTableView.reloadData()
         btnBack.setTitle("", for: .normal)
+        initSideMenuView()
     }
     
     @IBAction func btnActionBack(_ sender: UIButton) {
         navigationController?.popViewController()
     }
-}
     
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+}
+
 extension SelectCategoryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count

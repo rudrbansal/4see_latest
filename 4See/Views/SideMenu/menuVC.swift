@@ -15,7 +15,6 @@ class menuVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(UrlConfig.IMAGE_URL+(AppConfig.loggedInUser!.userInfo!.companyId!.image!))
-//        logoImg.setImageOnView(UrlConfig.IMAGE_URL+AppConfig.loggedInUser!.userInfo!.companyId!.image!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     }
     
     @IBAction func changePassBtn(_ sender: Any) {
@@ -33,14 +32,16 @@ class menuVC: UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "AttendanceListViewController") as! AttendanceListViewController
             navigationController?.pushViewController(vc, completion: nil)
         case 3:
-            break
-        case 4:
             let objc = messageVC()
             self.navigationController?.pushViewController(objc)
+        case 4:
+            break
         case 5:
+            break
+        case 6:
             let objc = policiesVC()
             self.navigationController?.pushViewController(objc)
-        case 6:
+        case 7:
             let alertController = UIAlertController(title: "4See", message: "Are you sure you want to logout?", preferredStyle: .alert)
             let btnYes = UIAlertAction(title: "Yes", style: .default) { (action:UIAlertAction!) in
                 self.userLogout()

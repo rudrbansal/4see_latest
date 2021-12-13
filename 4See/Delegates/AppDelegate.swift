@@ -120,22 +120,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
         
         Messaging.messaging().apnsToken = deviceToken
         // Pass device token to auth.
-        let firebaseAuth = Auth.auth()
-        //At development time we use .sandbox
-        firebaseAuth.setAPNSToken(deviceToken, type: AuthAPNSTokenType.sandbox)
-        //  Auth.auth().setAPNSToken(deviceToken, type: .prod)
-        let  devicetoken  = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        print("Device Token : ",devicetoken)
-        //            AppConfig.deviceToken = devicetoken
+//        let firebaseAuth = Auth.auth()
+//        //At development time we use .sandbox
+//        firebaseAuth.setAPNSToken(deviceToken, type: AuthAPNSTokenType.sandbox)
+//        //  Auth.auth().setAPNSToken(deviceToken, type: .prod)
+//        let  devicetoken  = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+//        print("Device Token : ",devicetoken)
+//        //            AppConfig.deviceToken = devicetoken
         
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        if Auth.auth().canHandle(url) {
+//        if Auth.auth().canHandle(url) {
             return true
-        } else {
-            return false
-        }
+//        } else {
+//            return false
+//        }
     }
     
     @available(iOS 10.0, *)
@@ -145,13 +145,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
     {
         
-        if Auth.auth().canHandleNotification(notification)
-        {
-            completionHandler(.noData)
-            print(notification.values)
-            
-            return
-        }
+//        if Auth.auth().canHandleNotification(notification)
+//        {
+//            completionHandler(.noData)
+//            print(notification.values)
+//
+//            return
+//        }
         print(notification.values)
         
     }

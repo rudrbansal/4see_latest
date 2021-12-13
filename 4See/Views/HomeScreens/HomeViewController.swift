@@ -47,37 +47,7 @@ class HomeViewController: BaseViewController {
         dataSetup()
         
         NotificationCenter.default.addObserver(self, selector : #selector(handleNotification(n:)), name : Notification.Name("notificationData"), object : nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateGPSButton), name: UIApplication.willEnterForegroundNotification, object: nil)
-        
-        if CLLocationManager.locationServicesEnabled() {
-            switch locationManager.authorizationStatus {
-            case .notDetermined, .restricted, .denied:
-//                gpsSwitch.setOn(false, animated: true)
-//                self.switchLbl.text = "GPS location is switched off"
-                self.updateUserProfile()
-            case .authorizedAlways, .authorizedWhenInUse:
-                if let geoLocaton = UserDefaults.standard.value(forKey: "geoLocaton") as? String, geoLocaton == "off" {
-//                    gpsSwitch.setOn(false, animated: true)
-//                    self.switchLbl.text = "GPS location is switched off"
-                    self.updateUserProfile()
-                } else {
-                    if UserDefaults.standard.value(forKey: "geoLocaton") as? String != nil {
-//                        gpsSwitch.setOn(true, animated: true)
-//                        self.switchLbl.text = "GPS location is switched on"
-                        locationManager.delegate = self
-                        locationManager.requestAlwaysAuthorization()
-                        locationManager.startUpdatingLocation()
-                        locationManager.activityType = .automotiveNavigation
-                        locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
-                        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                        locationManager.startMonitoringSignificantLocationChanges()
-                    }
-                }
-            @unknown default:
-                break
-            }
-        }
+                
         headerImageCollectionView.dataSource = self
         headerImageCollectionView.delegate = self
         headerImageCollectionView.reloadData()
@@ -93,52 +63,6 @@ class HomeViewController: BaseViewController {
 //        getAttendanceListAPI()
     }
     
-    @objc func updateGPSButton() {
-        if CLLocationManager.locationServicesEnabled() {
-//            switch locationManager.authorizationStatus {
-////            case .notDetermined, .restricted, .denied:
-////                gpsSwitch.setOn(false, animated: true)
-////                self.switchLbl.text = "GPS location is switched off"
-//            case .authorizedAlways, .authorizedWhenInUse:
-////                gpsSwitch.setOn(true, animated: true)
-////                self.switchLbl.text = "GPS location is switched on"
-//                locationManager.delegate = self
-//                locationManager.requestAlwaysAuthorization()
-//                locationManager.startUpdatingLocation()
-//                locationManager.activityType = .automotiveNavigation
-//                locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
-//                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//                locationManager.startMonitoringSignificantLocationChanges()
-//            @unknown default:
-//                break
-//            }
-        }
-        updateUserProfile()
-    }
-    
-    func checkLocationPermissions() {
-        if CLLocationManager.locationServicesEnabled() {
-//            switch locationManager.authorizationStatus {
-//            case .notDetermined, .restricted, .denied:
-//                gpsSwitch.setOn(false, animated: true)
-//                self.switchLbl.text = "GPS location is switched off"
-//                self.openSettings()
-//            case .authorizedAlways, .authorizedWhenInUse:
-//                gpsSwitch.setOn(true, animated: true)
-//                self.switchLbl.text = "GPS location is switched on"
-//                locationManager.delegate = self
-//                locationManager.requestAlwaysAuthorization()
-//                locationManager.startUpdatingLocation()
-//                locationManager.activityType = .automotiveNavigation
-//                locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
-//                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//                locationManager.startMonitoringSignificantLocationChanges()
-//            @unknown default:
-//                break
-//            }
-        }
-        updateUserProfile()
-    }
     //MARK:- SideMenu Function
     
     func initSideMenuView() {
@@ -148,11 +72,8 @@ class HomeViewController: BaseViewController {
     
     func dataSetup() {
         Global.getDataFromUserDefaults(.userData)
-//        nameLbl.text = "Welcome \(AppConfig.loggedInUser!.userInfo!.name!.firstCapitalized)"
-//        jobLbl.text = UserDefaults.standard.value(forKey: "jobTitle") as! String + " - " + AppConfig.loggedInUser!.userInfo!.department!
         let img = UserDefaults.standard.value(forKey: "image") as! String
         profileImageView.setImageOnView(UrlConfig.IMAGE_URL+img.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-//        logoImg.setImageOnView(UrlConfig.IMAGE_URL+AppConfig.loggedInUser!.userInfo!.companyId!.image!.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     }
     
     //MARK:- IBActions()
@@ -181,33 +102,6 @@ class HomeViewController: BaseViewController {
     
     @IBAction func btnActionSocialSpace(_ sender: UIButton) {
         
-    }
-    
-    func openSettings() {
-//        if (sender.isOn == true){
-//            print("on")
-//            gpsSwitch.setOn(true, animated: true)
-//            switchLbl.text = "GPS location is switched on"
-//            CLLocationManager.locationServicesEnabled()
-        let alert = UIAlertController(title: "Setting", message: "GPS access is restricted. In order to use tracking, please enable GPS in the Settings app under Privacy, Location Services.", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Go to Settings now", style: .default, handler: { (alert: UIAlertAction!) in
-            if URL(string: UIApplication.openSettingsURLString) != nil {
-                // If general location settings are enabled then open location settings for the app
-                UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!, options: [:], completionHandler: nil)
-            }
-            // }
-
-        }))
-
-        self.present(alert, animated: true, completion: nil)
-//        }
-//        else{
-//            print("off")
-//            switchLbl.text = "GPS location is switched off"
-//            statusDeniedAlert()
-//            gpsSwitch.setOn(false, animated: true)
-//
-//        }
     }
 }
 extension HomeViewController {
@@ -245,72 +139,6 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController : CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if (status == CLAuthorizationStatus.authorizedAlways) {
-            //App Authorized, stablish geofence
-            locationManager.delegate = self
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startUpdatingLocation()
-            locationManager.activityType = .automotiveNavigation
-            locationManager.distanceFilter = kCLLocationAccuracyHundredMeters
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.startMonitoringSignificantLocationChanges()
-            
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        let userLocation:CLLocation = locations[0] as CLLocation
-        locationManager.stopUpdatingLocation()
-        
-        current_latitude = userLocation.coordinate.latitude
-        current_longitude = userLocation.coordinate.longitude
-        let location = CLLocation.init(latitude: current_latitude, longitude: current_longitude)
-        
-        if AppConfig.loggedInUser!.userInfo!.companyId!.location!.lat == nil && AppConfig.loggedInUser!.userInfo!.companyId!.location!.lng == nil {
-            company_lat = 30.639950
-            company_lng = 76.814510
-        } else {
-            company_lat = (AppConfig.loggedInUser!.userInfo!.companyId!.location!.lat! as NSString).doubleValue
-            company_lng = (AppConfig.loggedInUser!.userInfo!.companyId!.location!.lng! as NSString).doubleValue
-        }
-        
-        let officeLocation = CLLocation.init(latitude: company_lat, longitude: company_lng)
-        
-        let geoFenceCenter = CLLocationCoordinate2DMake(company_lat,company_lng)
-        let geofenceRegion = CLCircularRegion.init(center: geoFenceCenter, radius: min(100.0, locationManager.maximumRegionMonitoringDistance), identifier: "region")
-        geofenceRegion.notifyOnExit = true
-        geofenceRegion.notifyOnEntry = true
-        locationManager.startMonitoring(for: geofenceRegion)
-        print(location.distance(from: officeLocation))
-        print(geofenceRegion.radius)
-        print(location)
-        print(officeLocation)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didStartMonitoringFor region: CLRegion) {
-        print("Started Monitoring Region: \(region.identifier)")
-        manager.requestState(for: region)
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
-        if region is CLCircularRegion {
-            self.showToast("You are enter in location.")
-//            workBtn.isUserInteractionEnabled = true
-        }
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
-        if region is CLCircularRegion {
-            self.showToast("You are exit from location.")
-//            workBtn.isUserInteractionEnabled = false
-        }
-    }
-}
-
 extension HomeViewController {
 
     func updateUserProfile() {
@@ -320,7 +148,7 @@ extension HomeViewController {
     
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
@@ -331,14 +159,11 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         return cell
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-
-        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
-    }
-
-    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-
-        pageControl?.currentPage = Int(scrollView.contentOffset.x) / Int(scrollView.frame.width)
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let pageWidth = scrollView.frame.size.width
+        let fractionalPage = scrollView.contentOffset.x / pageWidth
+        let page = lround(Double(fractionalPage))
+        self.pageControl.currentPage = page
     }
 }
 

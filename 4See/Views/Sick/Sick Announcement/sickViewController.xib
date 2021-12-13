@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,7 +63,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sick Announcements" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHp-cT-ymS">
-                                    <rect key="frame" x="126.5" y="62" width="161.5" height="20"/>
+                                    <rect key="frame" x="126.5" y="62" width="161" height="20"/>
                                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -98,7 +99,7 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sick Leave Announcement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E09-fH-sVk">
-                            <rect key="frame" x="105.5" y="265" width="203" height="27"/>
+                            <rect key="frame" x="105" y="265" width="204" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="27" id="dKT-CT-Umu"/>
                             </constraints>
@@ -195,7 +196,7 @@
                                                             <rect key="frame" x="10" y="0.0" width="356" height="52"/>
                                                             <subviews>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I0h-YD-lGq">
-                                                                    <rect key="frame" x="5" y="10.5" width="5" height="35"/>
+                                                                    <rect key="frame" x="5" y="10.5" width="4" height="35"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="35" id="qzR-Ns-9LA"/>
                                                                     </constraints>
@@ -281,13 +282,13 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="356" height="29"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sick Days applying for:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIs-Ln-4Zg">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="287.5" height="29"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="286.5" height="29"/>
                                                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                                                             <color key="textColor" name="theme"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8gF-7L-1X8">
-                                                                            <rect key="frame" x="287.5" y="0.0" width="68.5" height="29"/>
+                                                                            <rect key="frame" x="286.5" y="0.0" width="69.5" height="29"/>
                                                                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                                         </textField>
@@ -325,7 +326,7 @@
                                                                     <rect key="frame" x="0.0" y="77.5" width="356" height="29"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Collegues to be Tested for COVID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zC9-QK-sF8">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="237.5" height="29"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="235.5" height="29"/>
                                                                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="13"/>
                                                                             <color key="textColor" name="theme"/>
                                                                             <nil key="highlightedColor"/>

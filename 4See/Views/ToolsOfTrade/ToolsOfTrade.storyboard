@@ -40,6 +40,9 @@
                                             <constraint firstAttribute="height" constant="40" id="D32-8H-OxS"/>
                                         </constraints>
                                         <state key="normal" image="menu"/>
+                                        <connections>
+                                            <action selector="menuBtnAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="4Vw-YQ-1M4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AGA-jX-bRT">
                                         <rect key="frame" x="32" y="54.5" width="31" height="31"/>
@@ -328,6 +331,9 @@
                                             <constraint firstAttribute="width" secondItem="Pvm-Fh-QbD" secondAttribute="height" multiplier="1:1" id="52w-jR-Hox"/>
                                         </constraints>
                                         <state key="normal" image="menu"/>
+                                        <connections>
+                                            <action selector="menuBtnAction:" destination="lv0-76-lwc" eventType="touchUpInside" id="zmD-1S-rPT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nbl-k8-U1V">
                                         <rect key="frame" x="32" y="54.5" width="31" height="31"/>
@@ -364,7 +370,7 @@
                                 <rect key="frame" x="0.0" y="100" width="414" height="80"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOOLS OF TRADE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5Z-JR-7OW">
-                                        <rect key="frame" x="123" y="28.5" width="168.5" height="23.5"/>
+                                        <rect key="frame" x="127.5" y="28.5" width="159" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -411,7 +417,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaw-e0-o7X">
-                                <rect key="frame" x="32" y="238.5" width="102.5" height="18"/>
+                                <rect key="frame" x="32" y="238.5" width="103.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                 <color key="textColor" name="theme"/>
                                 <nil key="highlightedColor"/>
@@ -426,7 +432,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial No*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0A-Uv-lHV">
-                                <rect key="frame" x="32" y="316.5" width="66.5" height="18"/>
+                                <rect key="frame" x="32" y="316.5" width="68" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                 <color key="textColor" name="theme"/>
                                 <nil key="highlightedColor"/>
@@ -451,57 +457,98 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Attachments:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbw-PR-e3O">
-                                <rect key="frame" x="30" y="558.5" width="89.5" height="17.5"/>
+                                <rect key="frame" x="30" y="558.5" width="90.5" height="18"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Optional)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN2-yC-iU0">
-                                <rect key="frame" x="30" y="576" width="57" height="14.5"/>
+                                <rect key="frame" x="30" y="576.5" width="57" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TQp-Bb-T7i">
-                                <rect key="frame" x="30" y="600.5" width="354" height="56"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TQp-Bb-T7i">
+                                <rect key="frame" x="30" y="601" width="354" height="56"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="KTp-g3-9mO"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ynC-HX-pzw">
-                                    <size key="itemSize" width="77" height="66"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="ynC-HX-pzw">
+                                    <size key="itemSize" width="54" height="54"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j33-6r-5MD" customClass="AddListCollectionViewCell" customModule="_See" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addTollCollectionView" id="j33-6r-5MD" customClass="AddToolCollectionViewCell" customModule="_See" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="54" height="54"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Q9C-Qb-LMg">
-                                            <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wfh_banner" translatesAutoresizingMaskIntoConstraints="NO" id="Bsm-p6-c5i">
-                                                    <rect key="frame" x="0.0" y="0.0" width="77" height="66"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Bsm-p6-c5i">
+                                                    <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANR-vF-6KY">
+                                                    <rect key="frame" x="24" y="-4" width="34" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="34" id="cWI-bc-8bw"/>
+                                                        <constraint firstAttribute="width" constant="34" id="mek-Id-pp9"/>
+                                                    </constraints>
+                                                    <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="X"/>
+                                                    <connections>
+                                                        <action selector="deleteButtonTapped:" destination="j33-6r-5MD" eventType="touchUpInside" id="x2Z-s3-QLg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="Bsm-p6-c5i" secondAttribute="bottom" id="Cdb-0N-7eo"/>
                                                 <constraint firstAttribute="trailing" secondItem="Bsm-p6-c5i" secondAttribute="trailing" id="Egs-MJ-bQd"/>
+                                                <constraint firstItem="ANR-vF-6KY" firstAttribute="top" secondItem="Q9C-Qb-LMg" secondAttribute="top" constant="-4" id="HwK-zA-pDh"/>
+                                                <constraint firstAttribute="trailing" secondItem="ANR-vF-6KY" secondAttribute="trailing" constant="-4" id="Xsw-7E-gps"/>
                                                 <constraint firstItem="Bsm-p6-c5i" firstAttribute="leading" secondItem="Q9C-Qb-LMg" secondAttribute="leading" id="a7F-Un-XKp"/>
                                                 <constraint firstItem="Bsm-p6-c5i" firstAttribute="top" secondItem="Q9C-Qb-LMg" secondAttribute="top" id="nd1-H7-1rb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="77" height="66"/>
+                                        <size key="customSize" width="54" height="54"/>
                                         <connections>
-                                            <outlet property="taskImageView" destination="Bsm-p6-c5i" id="Ebe-Dp-SfR"/>
+                                            <outlet property="toolImageView" destination="Bsm-p6-c5i" id="P2i-cM-j53"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddToolPlusCollectionViewCell" id="8oh-sD-DUS" customClass="AddToolPlusCollectionViewCell" customModule="_See" customModuleProvider="target">
+                                        <rect key="frame" x="59" y="1" width="54" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="i3K-Sh-kg6">
+                                            <rect key="frame" x="0.0" y="0.0" width="54" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HDP-l1-P5Q">
+                                                    <rect key="frame" x="13" y="13" width="27" height="27"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HDP-l1-P5Q" firstAttribute="leading" secondItem="i3K-Sh-kg6" secondAttribute="leading" constant="13" id="Hni-qr-0H5"/>
+                                                <constraint firstItem="HDP-l1-P5Q" firstAttribute="top" secondItem="i3K-Sh-kg6" secondAttribute="top" constant="11" id="IfW-nx-TlQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="HDP-l1-P5Q" secondAttribute="trailing" constant="14" id="h6V-zv-IIk"/>
+                                                <constraint firstAttribute="bottom" secondItem="HDP-l1-P5Q" secondAttribute="bottom" constant="12" id="qbq-rt-wfY"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="54" height="54"/>
+                                    </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="lv0-76-lwc" id="5La-68-7Zu"/>
+                                    <outlet property="delegate" destination="lv0-76-lwc" id="Vi3-rz-nOB"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ML7-qH-ILE">
-                                <rect key="frame" x="175" y="684.5" width="64" height="31.5"/>
+                                <rect key="frame" x="175" y="685" width="64" height="31.5"/>
                                 <color key="tintColor" red="0.035294117649999998" green="0.027450980390000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -571,6 +618,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addToolCollectionView" destination="TQp-Bb-T7i" id="hRI-5T-13B"/>
                         <outlet property="btnBack" destination="Nbl-k8-U1V" id="qJN-uF-KOm"/>
                     </connections>
                 </viewController>
@@ -588,8 +636,8 @@
         <image name="bottomImg" width="113.5" height="34.5"/>
         <image name="delete" width="21" height="23"/>
         <image name="menu" width="32" height="32"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="toolsOfTradeWhite" width="45.5" height="28"/>
-        <image name="wfh_banner" width="205.5" height="157.5"/>
         <namedColor name="theme">
             <color red="0.035294117647058823" green="0.027450980392156862" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

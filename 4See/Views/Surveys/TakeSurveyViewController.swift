@@ -5,8 +5,9 @@
 //
 
 import UIKit
+import SideMenu
 
-class TakeSurveyViewController: UIViewController {
+class TakeSurveyViewController: BaseViewController {
     
     @IBOutlet weak var surveyQuestionsTableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
@@ -21,6 +22,15 @@ class TakeSurveyViewController: UIViewController {
         backButton.setTitle("", for: .normal)
     }
     
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+
     @IBAction func btnActionBack(_ sender: UIButton) {
         navigationController?.popViewController()
     }

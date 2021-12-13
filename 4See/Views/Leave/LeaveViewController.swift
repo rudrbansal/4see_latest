@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class LeaveViewController: BaseViewController {
     
@@ -13,18 +14,25 @@ class LeaveViewController: BaseViewController {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var btnDelete: UIButton!
+    @IBOutlet weak var btnConfirmDelete: UIButton!
+    @IBOutlet weak var btnCancelDelete: UIButton!
+    @IBOutlet weak var tableHeight: NSLayoutConstraint!
     
     let viewModel = SickViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableHeight.constant = (self.view.frame.height * 0.5)
         btnBack.setTitle("", for: .normal)
         btnAdd.setTitle("", for: .normal)
+        initSideMenuView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getLeavesData()
+        btnConfirmDelete.isHidden = true
+        btnCancelDelete.isHidden = true
     }
     
     func getLeavesData() {
@@ -41,6 +49,15 @@ class LeaveViewController: BaseViewController {
         }
     }
     
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+    
     @IBAction func btnActionBack(_ sneder: UIButton) {
         navigationController?.popViewController()
     }
@@ -52,7 +69,27 @@ class LeaveViewController: BaseViewController {
     }
     
     @IBAction func btnActionDelete(_ sender: UIButton) {
-        
+        btnConfirmDelete.isHidden = false
+        btnCancelDelete.isHidden = false
+        btnAdd.isHidden = true
+        btnDelete.isHidden = true
+        leaveTableView.reloadData()
+    }
+    
+    @IBAction func btnActionConfirmDelete(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "PopUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        vc.popUpTitle = "Removed items"
+        vc.message = "Items have been removed"
+        present(vc, animated: false)
+    }
+    
+    @IBAction func btnActionCancelDelete(_ sender: UIButton) {
+        btnConfirmDelete.isHidden = true
+        btnCancelDelete.isHidden = true
+        btnAdd.isHidden = false
+        btnDelete.isHidden = false
+        leaveTableView.reloadData()
     }
 }
 
@@ -65,6 +102,7 @@ extension LeaveViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LeaveTableViewCell") as! LeaveTableViewCell
         let data = viewModel.leavesList!.data![indexPath.row]
         cell.setupCellData(data: data)
+        cell.btnSelection.isHidden = btnConfirmDelete.isHidden
         return cell
     }
 }
@@ -73,6 +111,7 @@ class LeaveTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var typeOfLeaveLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var btnSelection: UIButton!
     
     func setupCellData(data: leaveInfo) {
         self.typeOfLeaveLabel.text = data.reason
@@ -86,6 +125,7 @@ class LeaveTableViewCell: UITableViewCell {
         
         let date = data.updatedAt
         dateLabel.text = createDateStamp(dateFromBackEnd: date ?? "")
+        btnSelection.setTitle("", for: .normal)
     }
     
     func createDateStamp(dateFromBackEnd:String)->String {

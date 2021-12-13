@@ -16,9 +16,7 @@ class TimeTrackingVC: BaseViewController
         return "TimeTrackingVC"
     }
     @IBOutlet weak var titleLbl: UILabel!
-    @IBOutlet weak var bannerIng: UIImageView!
     @IBOutlet weak var timerView: UILabel!
-    @IBOutlet weak var backImg: UIImageView!
     @IBOutlet weak var trackingView: UIView!
     @IBOutlet weak var dateLBL: UILabel!
     @IBOutlet weak var clockedInTimeLbl: UILabel!
@@ -62,12 +60,10 @@ class TimeTrackingVC: BaseViewController
         if type == "Work From Home"
         {
             titleLbl.text = "Work From Home"
-            bannerIng.image = UIImage(named: "wfh_banner")
         }
         else
         {
             titleLbl.text = "Work Attendance"
-            bannerIng.image = UIImage(named: "bioMatric_banner")
             
         }
         gradientViewSetup(view: trackingView)

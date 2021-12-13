@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class SubmitIdeaViewController: UIViewController {
     
@@ -22,7 +23,18 @@ class SubmitIdeaViewController: UIViewController {
         publishedSubmissionsTableView.reloadData()
         btnBack.setTitle("", for: .normal)
         btnAddIdea.setTitle("", for: .normal)
+        initSideMenuView()
     }
+
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+    
     
     @IBAction func btnActionBack(_ sender: UIButton) {
         navigationController?.popViewController()

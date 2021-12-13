@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class AddListViewController: UIViewController {
     
@@ -15,6 +16,16 @@ class AddListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         btnBack.setTitle("", for: .normal)
+        initSideMenuView()
+    }
+    
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
     }
     
     @IBAction func btnActionBack(_ sener: UIButton) {

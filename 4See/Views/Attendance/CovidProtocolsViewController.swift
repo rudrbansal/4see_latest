@@ -5,9 +5,10 @@
 //
 
 import UIKit
+import SideMenu
 
 class CovidProtocolsViewController: BaseViewController {
-
+    
     @IBOutlet weak var covidProtocolsTableView: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     
@@ -20,6 +21,16 @@ class CovidProtocolsViewController: BaseViewController {
         covidProtocolsTableView.delegate = self
         covidProtocolsTableView.reloadData()
         btnBack.setTitle("", for: .normal)
+        initSideMenuView()
+    }
+    
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
     }
     
     @IBAction func btnActionBack(_ sender: UIButton) {
@@ -37,10 +48,13 @@ extension CovidProtocolsViewController: UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "CovidProtocolTableViewCell") as! CovidProtocolTableViewCell
         cell.protocolLabel.text = covidProtocols[indexPath.row]
         cell.logoImageView.image = UIImage.init(named: images[indexPath.row])
+        cell.separatorView.isHidden = (indexPath.row == (covidProtocols.count - 1))
         return cell
     }
 }
+
 class CovidProtocolTableViewCell: UITableViewCell {
     @IBOutlet weak var protocolLabel: UILabel!
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var separatorView: UIView!
 }

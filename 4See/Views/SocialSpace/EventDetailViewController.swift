@@ -6,9 +6,9 @@
 //
 
 import UIKit
+import SideMenu
 
 class EventDetailViewController: UIViewController {
-
     
     @IBOutlet weak var descriptionImageView: UIImageView!
     @IBOutlet weak var eventDetailsTableView: UITableView!
@@ -30,12 +30,30 @@ class EventDetailViewController: UIViewController {
         btnIgnore.setTitleColor(UIColor.init(_colorLiteralRed: 241/255, green: 0/255, blue: 5/255, alpha: 1), for: .normal)
     }
     
+    func initSideMenuView() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    }
+    
+    @IBAction func menuBtnAction(_ sender: Any) {
+        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func btnActionConfirm(_ sender: UIButton) {
-        
+        let storyboard = UIStoryboard(name: "PopUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        vc.popUpTitle = "GREAT! SEE YOU THERE"
+        vc.message = "WE’RE LOOKING FORWARD TO IT"
+        present(vc, animated: false)
     }
     
     @IBAction func btnActionCancel(_ sender: UIButton) {
-        
+        let storyboard = UIStoryboard(name: "PopUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        vc.popUpTitle = "Sorry you can’t make it"
+        vc.message = "Maybe next time"
+        present(vc, animated: false)
     }
     
     @IBAction func btnActionBack(_ sender: UIButton) {
@@ -53,6 +71,7 @@ extension EventDetailViewController: UITableViewDataSource, UITableViewDelegate 
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventDetailTableViewCell") as! EventDetailTableViewCell
         cell.titleLabel.text = titles[indexPath.row]
         cell.descriptionLabel.text = values[indexPath.row]
+        
         return cell
     }
     
@@ -65,4 +84,3 @@ class EventDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 }
-    

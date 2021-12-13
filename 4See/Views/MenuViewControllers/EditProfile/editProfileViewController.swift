@@ -37,8 +37,7 @@ class EditProfileViewController: BaseViewController {
     }
     //MARK:- SideMenu Function
     
-    func initSideMenuView()
-    {
+    func initSideMenuView() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
 
         SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
