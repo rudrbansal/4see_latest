@@ -55,7 +55,6 @@ class EditProfileViewController: BaseViewController {
     
         let img = UserDefaults.standard.value(forKey: "image") as! String
         profileImg.setImageOnView(UrlConfig.IMAGE_URL+(img ))
-        
     }
     
     @IBAction func btnActionBack(_ sender: Any) {

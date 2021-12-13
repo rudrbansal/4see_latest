@@ -8,7 +8,7 @@
 import UIKit
 import SideMenu
 
-class SubmitAnIdeaViewController: UIViewController {
+class SubmitAnIdeaViewController: BaseViewController {
     
     @IBOutlet weak var btnBack: UIButton!
     
@@ -23,7 +23,7 @@ class SubmitAnIdeaViewController: UIViewController {
     }
     
     @IBAction func backBtnAction(_ sender: Any) {
-        present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func menuBtnAction(_ sender: Any) {

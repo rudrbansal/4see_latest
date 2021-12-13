@@ -82,7 +82,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socialSpace" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-8q-il7">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaveWhite" translatesAutoresizingMaskIntoConstraints="NO" id="gpH-8q-il7">
                                         <rect key="frame" x="32" y="22.5" width="39" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="39" id="AGc-9N-D5n"/>
@@ -399,7 +399,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="socialSpace" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-oH-VVD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaveWhite" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-oH-VVD">
                                         <rect key="frame" x="32" y="22.5" width="39" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="39" id="NA8-OQ-M8N"/>
@@ -555,7 +555,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Submit">
                                     <fontDescription key="titleFontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                    <color key="baseForegroundColor" red="0.7803921568627451" green="0.7803921568627451" blue="0.7803921568627451" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="baseForegroundColor" name="theme"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="btnActionSubmit:" destination="CDF-4p-8yb" eventType="touchUpInside" id="mN1-Et-G9d"/>
@@ -629,8 +629,8 @@
         <image name="bottomImg" width="113.5" height="34.5"/>
         <image name="delete" width="21" height="23"/>
         <image name="dropdownBlack" width="17" height="10"/>
+        <image name="leaveWhite" width="39" height="39"/>
         <image name="menu" width="32" height="32"/>
-        <image name="socialSpace" width="53" height="51.5"/>
         <namedColor name="appRed">
             <color red="0.94509803921568625" green="0.0" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
