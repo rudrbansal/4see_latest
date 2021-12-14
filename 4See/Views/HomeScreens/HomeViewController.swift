@@ -10,7 +10,8 @@ import SideMenu
 import MarqueeLabel
 import WebKit
 import CoreLocation
-import GoogleMaps
+//import GoogleMaps
+//import UPCarouselFlowLayout
 
 class HomeViewController: BaseViewController {
     
@@ -26,8 +27,8 @@ class HomeViewController: BaseViewController {
     let viewModel = announcementViewModel()
     let vModel = attendanceViewModel()
     private let locationManager = CLLocationManager()
-    var marker : GMSMarker!
-    var map_view: GMSMapView!
+//    var marker : GMSMarker!
+//    var map_view: GMSMapView!
     var current_latitude : CLLocationDegrees!
     var current_longitude : CLLocationDegrees!
     var company_lat : Double = 0.0
@@ -41,6 +42,14 @@ class HomeViewController: BaseViewController {
         brainstormBtn.setTitle("", for: .normal)
         surveyBtn.setTitle("", for: .normal)
         socialSpaceBtn.setTitle("", for: .normal)
+        
+//        let layout = UPCarouselFlowLayout()
+//        layout.itemSize = CGSize(width: headerImageCollectionView.frame.width - 60, height: headerImageCollectionView.frame.height)
+//        layout.scrollDirection = .horizontal
+//        layout.sideItemAlpha = 0.4
+//        layout.sideItemScale = 0.6
+//        layout.sideItemShift = 0
+//        headerImageCollectionView.collectionViewLayout = layout
         
         getAnnouncementsData()
         initSideMenuView()

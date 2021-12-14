@@ -26,6 +26,16 @@ class RequestLeaveViewController: BaseViewController {
         super.viewDidLoad()
         datePicker.minimumDate = Date()
         btnBack.setTitle("", for: .normal)
+        btnSubmit.setTitleColor(UIColor.init(hexString: "#C7C7C7"), for: .normal)
+        btnSubmit.isUserInteractionEnabled = false
+    }
+    
+    func showPopUp(title: String, message: String) {
+        let storyboard = UIStoryboard(name: "PopUp", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PopUpViewController") as! PopUpViewController
+        vc.popUpTitle = title
+        vc.message = message
+        present(vc, animated: false)
     }
     
     func applySickLeaveAPI() {
@@ -33,11 +43,9 @@ class RequestLeaveViewController: BaseViewController {
         viewModel.applyLeaveApi{ (status,message) in
             self.hideProgressBar()
             if status == true {
-                self.hideProgressBar()
-                self.showToast(message)
+                self.showPopUp(title: "SUBMISSION COMPLETE", message: "Your submission has been sent for review")
                 self.navigationController?.popViewController(animated: true)
             } else {
-                self.hideProgressBar()
                 self.showToast(message)
             }
         }
@@ -101,6 +109,16 @@ extension RequestLeaveViewController: UITextFieldDelegate {
                 isToDate = true
             }
             textField.inputView = datePicker
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if tfLeavetype.text == "" || tfStartDate.text == "" || tfEndDate.text == "" {
+            btnSubmit.setTitleColor(UIColor.init(hexString: "#C7C7C7"), for: .normal)
+            btnSubmit.isUserInteractionEnabled = false
+        } else {
+            btnSubmit.setTitleColor(UIColor.init(hexString: "#090742"), for: .normal)
+            btnSubmit.isUserInteractionEnabled = true
         }
     }
 }

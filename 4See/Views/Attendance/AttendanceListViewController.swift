@@ -207,14 +207,14 @@ extension AttendanceListViewController: UITableViewDataSource, UITableViewDelega
     {
         if self.vModel.attendList.count == 0
         {
-            if !locationStatus {
-                showToast("Please turn on the GPS switch first before moving further.")
-            } else {
-                let objc = biometricsVC()
-                objc.type = "Attendance"
-                GlobalVariable.dismiss = "other"
-                self.navigationController?.pushViewController(objc)
-            }
+//            if !locationStatus {
+//                showToast("Please turn on the GPS switch first before moving further.")
+//            } else {
+//                let objc = biometricsVC()
+//                objc.type = "Attendance"
+//                GlobalVariable.dismiss = "other"
+//                self.navigationController?.pushViewController(objc)
+//            }
         }
         else
         {

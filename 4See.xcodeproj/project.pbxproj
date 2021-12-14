@@ -122,6 +122,8 @@
 		1794140D25F25D9700288E16 /* runningLateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1794140B25F25D9700288E16 /* runningLateVC.swift */; };
 		1794140E25F25D9700288E16 /* runningLateVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1794140C25F25D9700288E16 /* runningLateVC.xib */; };
 		1794141125F265DE00288E16 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1794141025F265DE00288E16 /* Global.swift */; };
+		1798A0D9276901F80063E36F /* MySubmissionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798A0D8276901F80063E36F /* MySubmissionsViewController.swift */; };
+		1798A0DB276932BA0063E36F /* SpecialOpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1798A0DA276932BA0063E36F /* SpecialOpsViewController.swift */; };
 		1799D80A2612F98900AC42FE /* AttendanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799D8092612F98900AC42FE /* AttendanceModel.swift */; };
 		1799D80D2612F99700AC42FE /* AttendanceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799D80C2612F99700AC42FE /* AttendanceRequest.swift */; };
 		1799D8102612F9A500AC42FE /* AttendanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1799D80F2612F9A500AC42FE /* AttendanceResponse.swift */; };
@@ -329,6 +331,8 @@
 		1794140B25F25D9700288E16 /* runningLateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = runningLateVC.swift; sourceTree = "<group>"; };
 		1794140C25F25D9700288E16 /* runningLateVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = runningLateVC.xib; sourceTree = "<group>"; };
 		1794141025F265DE00288E16 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		1798A0D8276901F80063E36F /* MySubmissionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubmissionsViewController.swift; sourceTree = "<group>"; };
+		1798A0DA276932BA0063E36F /* SpecialOpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialOpsViewController.swift; sourceTree = "<group>"; };
 		1799D8092612F98900AC42FE /* AttendanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceModel.swift; sourceTree = "<group>"; };
 		1799D80C2612F99700AC42FE /* AttendanceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRequest.swift; sourceTree = "<group>"; };
 		1799D80F2612F9A500AC42FE /* AttendanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceResponse.swift; sourceTree = "<group>"; };
@@ -1160,6 +1164,7 @@
 				17769C7027607EB200F472EF /* PublishedSubmissionViewController.swift */,
 				17D860A72764521000B14534 /* SubmitAnIdeaViewController.swift */,
 				17769C6E276075B200F472EF /* SubmitIdeaViewController.swift */,
+				1798A0D8276901F80063E36F /* MySubmissionsViewController.swift */,
 				17769C6C27601AE000F472EF /* SelectCategoryViewController.swift */,
 			);
 			path = BrainStrom;
@@ -1241,6 +1246,7 @@
 			isa = PBXGroup;
 			children = (
 				176701CB25F0B090002FB87A /* menuVC.swift */,
+				1798A0DA276932BA0063E36F /* SpecialOpsViewController.swift */,
 			);
 			path = SideMenu;
 			sourceTree = "<group>";
@@ -1542,6 +1548,8 @@
 				17CF61E525F25053007B0339 /* archiveCell.swift in Sources */,
 				17070B282604C24D0079E079 /* editProfileHandler.swift in Sources */,
 				17800FF5260E05F900F8EABA /* ProfileModel.swift in Sources */,
+				1798A0DB276932BA0063E36F /* SpecialOpsViewController.swift in Sources */,
+				1798A0D9276901F80063E36F /* MySubmissionsViewController.swift in Sources */,
 				5CB5B2E22761D7030038BB98 /* SurveyDetailsViewController.swift in Sources */,
 				17CF0C5327652A5E00384BCC /* AddToolPlusCollectionViewCell.swift in Sources */,
 				5CA737A32754093900130EB5 /* ToDoListView.swift in Sources */,

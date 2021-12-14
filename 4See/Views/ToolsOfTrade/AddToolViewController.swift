@@ -12,8 +12,12 @@ class AddToolViewController: BaseViewController {
     
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var addToolCollectionView: UICollectionView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var idTextField: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
     
-    var tools : [UIImage] = [UIImage(named:"checkmark")!,UIImage(named:"notify_bell")!,UIImage(named:"Thanks")!,UIImage(named:"uncheck")!]
+    var tools : [UIImage] = [UIImage()]
+    let viewModel = toolsTradeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +34,30 @@ class AddToolViewController: BaseViewController {
         SideMenuManager.default.leftMenuNavigationController = storyboard.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
     }
     
+    func addSystemApi() {
+        self.showProgressBar()
+        viewModel.addSystemApi{ (status,message) in
+            self.hideProgressBar()
+            if status == true {
+                self.hideProgressBar()
+                self.showToast(message)
+                self.navigationController?.popViewController()
+
+            } else {
+                self.hideProgressBar()
+                self.showToast(message)
+            }
+        }
+    }
+    
     @IBAction func menuBtnAction(_ sender: Any) {
         present(SideMenuManager.default.leftMenuNavigationController!, animated: true, completion: nil)
+    }
+    
+    @IBAction func btnActionSave() {
+        if nameTextField.text != "" || idTextField.text != "" {
+            addSystemApi()
+        }
     }
 }
 
@@ -48,8 +74,8 @@ extension AddToolViewController: UICollectionViewDelegate, UICollectionViewDataS
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "addTollCollectionView", for: indexPath) as! AddToolCollectionViewCell
             cell.buttonHandler = {
-                print("delete")
                 self.tools.remove(at: indexPath.row)
+                self.addToolCollectionView.reloadData()
             }
             cell.toolImageView.image = tools[indexPath.row]
             return cell
@@ -76,12 +102,29 @@ extension AddToolViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     override func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let tempImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
-        tools.append(tempImage)
+        tools.insert(tempImage, at: tools.count - 1)
         addToolCollectionView.reloadData()
         self.dismiss(animated: true, completion: nil)
     }
     
     override func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension AddToolViewController: UITextViewDelegate {
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.text == "Type here..." {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "Type here..."
+            textView.textColor = UIColor.lightGray
+        }
     }
 }

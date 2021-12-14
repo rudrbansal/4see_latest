@@ -80,9 +80,9 @@ extension ToolsOfTradeViewController : UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToolsOfTradeTableViewCell") as! ToolsOfTradeTableViewCell
         cell.toolsLabel.text = viewModel.systemsList?.data?[indexPath.row].title
-        //        if viewModel.systemsList?.data?[indexPath.row].images?.count ?? 0 > 0{
-        //            cell.logoImageView.image = UIImage.init(named: viewModel.systemsList?.data?[indexPath.row].images?[0] ?? "")
-        //        }
+        if viewModel.systemsList?.data?[indexPath.row].images?.count ?? 0 > 0{
+            cell.logoImageView.image = UIImage.init(named: viewModel.systemsList?.data?[indexPath.row].images?[0] ?? "")
+        }
         cell.selectionButton.isHidden = !isRemoveItemsSelected
         return cell
     }
